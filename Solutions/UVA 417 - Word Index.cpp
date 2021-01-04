@@ -38,7 +38,7 @@ int main(){
         q.pop();
         if(t.size()==5) break;
         for(char i='a';i<='z';i++){
-            if(t.size()>0 && t[t.size()-1] < i){
+            if(t[t.size()-1] < i){
                 s=t;
                 s+=i;
                 mp[s]=c;
