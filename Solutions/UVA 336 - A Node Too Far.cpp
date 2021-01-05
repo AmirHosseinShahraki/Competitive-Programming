@@ -21,7 +21,7 @@ typedef tree<int,null_type,less<int>,rb_tree_tag,tree_order_statistics_node_upda
 map<int,vector<int>> adj;
 map<int,int>dis;
 map<int,int>vis;
-void bfs(int root,int lim){
+void bfs(int root){
     dis.clear();
     vis.clear();
     queue<int>q;
@@ -61,7 +61,7 @@ int main(){
         while(cin>>m>>k){
             if(!m && !k) break;
             count++;
-            bfs(m,k);
+            bfs(m);
             int c=0;
             for(auto it:dis) if(it.second > k) c++;
             c+=adj.size()-dis.size();
